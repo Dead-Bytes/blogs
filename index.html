@@ -22,6 +22,11 @@
     nav li a:hover { color:var(--fg); }
     nav li a.active { color:var(--accent); border-left-color:var(--accent); font-weight:600; }
     .side { position:sticky; top:48px; align-self:start; }
+    .engage { margin-top:56px; padding-top:28px; border-top:1px solid var(--line); }
+    .share { display:flex; flex-wrap:wrap; gap:8px; margin:12px 0 28px; font:14px system-ui, sans-serif; }
+    .share a, .share button { background:none; color:var(--fg); border:1px solid var(--line); border-radius:999px; padding:7px 14px; cursor:pointer; text-decoration:none; font:inherit; }
+    .share a:hover, .share button:hover { border-color:var(--accent); color:var(--accent); }
+    .engage .hint { color:var(--muted); font:14px system-ui, sans-serif; margin:0 0 8px; }
     details { display:none; }
     @media (max-width:760px) {
       .wrap { display:block; padding-top:32px; }
@@ -44,6 +49,7 @@
         <li><a href="#this-series">Why this series</a></li>
         <li><a href="#newcomers">A note to newcomers</a></li>
         <li><a href="#together">Shaped together</a></li>
+          <li><a href="#discussion">Like, share &amp; comment</a></li>
         </ol>
       </nav>
     </aside>
@@ -60,6 +66,7 @@
             <li><a href="#this-series">Why this series</a></li>
             <li><a href="#newcomers">A note to newcomers</a></li>
             <li><a href="#together">Shaped together</a></li>
+            <li><a href="#discussion">Like, share &amp; comment</a></li>
           </ol>
         </nav>
       </details>
@@ -90,6 +97,17 @@
       <p>As we move forward, let’s keep one thing in mind: even we don’t know what the standard way of doing anything in this industry is right now. It’s changing at a pace where neither a single human nor a swarm of agents can survive alone. It will be shaped by both of us together.</p>
       <p>Feel free to discuss more with me. You can reach me by mail at <a href="mailto:deadbytes9@gmail.com">deadbytes9@gmail.com</a>.</p>
     </section>
+    <section id="discussion" class="engage">
+      <h2>Like, share &amp; comment</h2>
+      <p class="hint">Enjoyed it? Pass it on, then react or comment below (sign in with GitHub).</p>
+      <div class="share">
+        <button id="native-share" hidden>Share…</button>
+        <button id="copy-link">Copy link</button>
+        <a id="share-x" target="_blank" rel="noopener">Post on X</a>
+        <a id="share-li" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+      <div id="comments"></div>
+    </section>
     </main>
   </div>
   <script>
@@ -102,6 +120,25 @@
     }
     addEventListener('scroll', spy, {passive:true}); spy();
     document.querySelectorAll('details nav a').forEach(a => a.addEventListener('click', () => a.closest('details').open = false));
+
+    (function () {
+      const url = location.origin + location.pathname, title = document.title;
+      document.getElementById('share-x').href = 'https://twitter.com/intent/tweet?text=' + encodeURIComponent(title) + '&url=' + encodeURIComponent(url);
+      document.getElementById('share-li').href = 'https://www.linkedin.com/sharing/share-offsite/?url=' + encodeURIComponent(url);
+      const copy = document.getElementById('copy-link');
+      copy.onclick = () => navigator.clipboard.writeText(url).then(() => { copy.textContent = 'Copied!'; setTimeout(() => copy.textContent = 'Copy link', 1800); });
+      if (navigator.share) { const n = document.getElementById('native-share'); n.hidden = false; n.onclick = () => navigator.share({ title, url }).catch(() => {}); }
+      function giscus(target, reactionsOnly) {
+        const g = document.createElement('script');
+        g.src = 'https://giscus.app/client.js'; g.async = true; g.crossOrigin = 'anonymous';
+        const a = { 'data-repo':'Dead-Bytes/blogs', 'data-repo-id':'R_kgDOVEf27Q', 'data-category':'Announcements', 'data-category-id':'DIC_kwDOVEf27c4DHj9Y',
+          'data-mapping':'specific', 'data-term':'blog-post-1', 'data-strict':'1', 'data-reactions-enabled':'1',
+          'data-emit-metadata':'0', 'data-input-position':'top', 'data-theme':'preferred_color_scheme', 'data-lang':'en', 'data-loading':'lazy' };
+        for (const k in a) g.setAttribute(k, a[k]);
+        document.getElementById('comments').appendChild(g);
+      }
+      giscus();
+    })();
   </script>
 </body>
 </html>
