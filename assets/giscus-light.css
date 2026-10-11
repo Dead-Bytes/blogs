@@ -1,0 +1,28 @@
+@import url("https://giscus.app/themes/transparent_light.css");
+main {
+  --color-fg-default: #1d1d1b;
+  --color-fg-muted: #6b6b66;
+  --color-fg-subtle: #9a978d;
+  --color-border-default: #e3e1d8;
+  --color-border-muted: #e3e1d8;
+  --color-canvas-default: transparent;
+  --color-canvas-subtle: #f2f0e8;
+  --color-canvas-inset: #f2f0e8;
+  --color-canvas-overlay: #f2f0e8;
+  --color-btn-text: #1d1d1b;
+  --color-btn-bg: #f2f0e8;
+  --color-btn-border: #e3e1d8;
+  --color-btn-hover-bg: #ebe8de;
+  --color-btn-hover-border: #b4432b;
+  --color-btn-primary-bg: #b4432b;
+  --color-btn-primary-hover-bg: #9c3a25;
+  --color-btn-primary-border: transparent;
+  --color-accent-fg: #b4432b;
+  --color-accent-emphasis: #b4432b;
+  --color-accent-muted: #b4432b66;
+  --color-accent-subtle: #b4432b1a;
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+.gsc-reactions-count, .gsc-comments-count { justify-content: flex-start; text-align: left; }
+.gsc-reactions { text-align: left; margin-bottom: 8px; }
+.gsc-comment-box, .gsc-comment-box-textarea { border-radius: 8px; }
