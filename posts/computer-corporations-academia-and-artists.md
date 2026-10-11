@@ -1,0 +1,36 @@
+---
+title: Computer Corporations, Academia, and Artists
+date: 2026-10-11
+summary: On AI anxiety, the people who build software, and why corporations, academia and artists shape the industry together.
+term: blog-post-1
+---
+
+## The weight of AI
+
+Recent advancements in AI have taken a toll on us. We want AI to grow far more than our physical world can accommodate. That has already started supply chain disruptions, causing price hikes on various products that are a lifeline to the digital economy. Yet the fear of AI taking over the steering wheel is evident in devs, researchers, top labs and even entry-level grads. Freshers especially feel depressed when they see the junior dev roles they have been applying for vanishing faster than ever. Whatever they do, it doesn’t give them a sense of achievement or distinction of sorts, which is reflected in an overall decline in the learning culture.
+
+## Computer artists
+
+Though I wonder where and how the computer geeks live now. Are they still in the same sphere as us, prompting every new model as it arrives and getting the work done? Or are they the indie devs who always presented programming as an art rather than a science? Being an indie dev is not as challenging as it used to be, but finding indie devs or tech nerds of sorts has become harder. To be clear, the community I am referring to is one where people’s quotes take precedence over the work they have shipped, and the ideology they follow is reflected in the software they produce. That is why I believe labelling this community as indie devs, tech nerds or computer geeks is rather shallow. Instead, I would call them computer artists, who through strong yet calculated imagination have created wonders of our world.
+
+## Three forces
+
+Academia and corporations have been as active in the field as the artists. I believe the software industry as a whole has always been a culmination of all three, where corporations, academia and artists came together and played equal parts in shaping its history and present. As for the future, though there is still chaos, I believe this balance shall remain, as this culture is what helped us grow the fastest-paced industry humanity has ever seen.
+
+## Why this series
+
+With these thoughts in mind, this is my attempt to document the history through a very macro lens and a novice’s POV.
+
+I believe the question of intelligence in systems goes back to the early days of Turing. Even before modern computers as we know them existed, the idea of thinking machines had been planted. It fell in and out of favor across all three communities, but the idea rose again when modern computation and software began, and it still drove many to keep working on it. Frankly, even before we had our first commercial operating system in place, academia had developed artificial neurons in the same pursuit.
+
+Advancements in AI have been predominantly shaped by advancements in neuroscience. As we switched back and forth on how our cognition works, so did the field of AI. This back-and-forth has always been between two fronts: whether our cognition is a rule-based system or a probabilistic model of sorts. No community has always rallied behind one side. There have been major switches along the way, and I have decided to uncover them throughout this series.
+
+## A note to newcomers
+
+Working on different tiers of projects, one thing I have learnt is that one cannot establish any superiority between vibe-slop projects and the engineering marvels that come out of defined engineering teams. If human effort has been put into a project, it is capable of exciting and amazing minds alike. On this note, I really wish that freshers, recent grads and new joinees in the engineering field have large aspirations and keep working to achieve them. The effort they put in is valuable, no matter how ridiculous it may seem. Accepting every decision of AI copilots while building their personal projects will only make them lose their distinctive stories, and they will continue to be ignored. To the other side of the spectrum, I request that you give as much importance to learning and curiosity as to closing those tickets.
+
+## Shaped together
+
+As we move forward, let’s keep one thing in mind: even we don’t know what the standard way of doing anything in this industry is right now. It’s changing at a pace where neither a single human nor a swarm of agents can survive alone. It will be shaped by both of us together.
+
+Feel free to discuss more with me. You can reach me by mail at deadbytes9@gmail.com.
